@@ -1,0 +1,33 @@
+<!--@page
+key: products
+title: Basmati & Non-Basmati Rice | Geo Excel
+description: 1121, 1401 and 1509 Basmati, PR 11, IR 64, Sona Masuri, Ponni, Jeerakasala and Matta rice: grain length, broken %, moisture, packaging and HS codes.
+scripts: catalogue
+-->
+    <section class="page-hero">
+      <div class="container">
+        <nav class="breadcrumb" aria-label="Breadcrumb"><ol><li><a href="../index.html">Home</a></li><li><a href="../products.html">Products</a></li><li aria-current="page">Rice</li></ol></nav>
+        <span class="page-hero__icon"><!-- @icon rice --></span>
+        <h1>Basmati &amp; non-basmati rice</h1>
+        <p class="lead">Extra-long-grain Basmati from Punjab and South Indian short-grain varieties, in retail and bulk packs. <!-- @count rice --> varieties listed.</p>
+      </div>
+    </section>
+
+    <section class="section section--tight">
+      <div class="container" data-catalogue>
+        <div class="toolbar">
+          <label class="search">
+            <span class="visually-hidden">Search rice varieties</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+            <input type="search" placeholder="Search, e.g. sella, 1509, Kerala" autocomplete="off" data-search>
+          </label>
+        </div>
+        <p class="result-count" aria-live="polite" data-result-count><!-- @count rice --> products</p>
+        <div class="grid">
+          <!-- @products rice -->
+        </div>
+        <div class="empty" data-empty hidden><p>No variety matches your search.</p></div>
+        <!-- @include category-tail -->
+      </div>
+    </section>
+    <!-- @itemlist rice -->

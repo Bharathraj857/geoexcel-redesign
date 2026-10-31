@@ -1,0 +1,148 @@
+<!--@page
+key: contact
+title: Request a Quote | Contact Geo Excel, Bangalore
+description: Send Geo Excel a quote request with product, quantity, packaging, destination and Incoterm, or call +91 80351 10602 or email Info@geoexcel.group.
+scripts: form
+-->
+    <section class="page-hero">
+      <div class="container">
+        <p class="eyebrow">Request a Quote</p>
+        <h1>Tell us what you need</h1>
+        <p class="lead">A complete enquiry (product, quantity, packaging and destination) helps our team respond with an accurate quotation.</p>
+      </div>
+    </section>
+
+    <section class="section section--tight">
+      <div class="container contact">
+        <!--
+          Submission: set data-endpoint to a JSON form service URL (e.g. Web3Forms or Formspree)
+          to send enquiries online. While it is empty, the form prepares an email draft instead
+          and says so clearly; nothing is reported as "sent".
+        -->
+        <form class="form" id="quote-form" novalidate data-endpoint="" data-recipient="Info@geoexcel.group">
+          <fieldset>
+            <legend>Products</legend>
+            <ul class="tray" data-tray aria-label="Products in your enquiry"></ul>
+            <p class="field__hint" data-tray-empty>No products added yet. <a href="products.html">Browse the catalogue</a> and use "Add to enquiry", or list products below.</p>
+            <div class="field field--full">
+              <label for="products">Products of interest <span class="optional">(editable)</span></label>
+              <textarea id="products" name="products" rows="2" placeholder="e.g. 1121 Basmati Sella Rice, Black Peppercorn"></textarea>
+              <p class="field__error" id="products-error"></p>
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend>Requirement</legend>
+            <div class="form__grid">
+              <div class="field field--split">
+                <div>
+                  <label for="quantity">Quantity *</label>
+                  <input id="quantity" name="quantity" type="number" min="0" step="any" inputmode="decimal" required>
+                </div>
+                <div>
+                  <label for="unit">Unit</label>
+                  <select id="unit" name="unit">
+                    <option>MT</option>
+                    <option>kg</option>
+                    <option>20 ft container</option>
+                    <option>40 ft container</option>
+                    <option>litres</option>
+                    <option>pairs</option>
+                  </select>
+                </div>
+                <p class="field__error" id="quantity-error"></p>
+              </div>
+              <div class="field">
+                <label for="country">Destination country *</label>
+                <input id="country" name="country" required autocomplete="country-name">
+                <p class="field__error" id="country-error"></p>
+              </div>
+              <div class="field">
+                <label for="incoterm">Preferred Incoterm</label>
+                <select id="incoterm" name="incoterm">
+                  <option value="">Not sure yet</option>
+                  <option>FOB</option>
+                  <option>CIF</option>
+                  <option>CFR</option>
+                  <option>EXW</option>
+                </select>
+              </div>
+              <div class="field">
+                <label for="packaging">Packaging preference <span class="optional">(optional)</span></label>
+                <input id="packaging" name="packaging" placeholder="e.g. 25 kg PP bags">
+              </div>
+              <div class="field">
+                <label for="timeline">Required by <span class="optional">(optional)</span></label>
+                <input id="timeline" name="timeline" type="month">
+              </div>
+              <div class="field field--full">
+                <label for="message">Specifications &amp; notes <span class="optional">(optional)</span></label>
+                <textarea id="message" name="message" rows="4" placeholder="Grade, specifications, private label, documents needed…"></textarea>
+              </div>
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend>Your details</legend>
+            <div class="form__grid">
+              <div class="field">
+                <label for="company">Company *</label>
+                <input id="company" name="company" required autocomplete="organization">
+                <p class="field__error" id="company-error"></p>
+              </div>
+              <div class="field">
+                <label for="name">Your name *</label>
+                <input id="name" name="name" required autocomplete="name">
+                <p class="field__error" id="name-error"></p>
+              </div>
+              <div class="field">
+                <label for="email">Business email *</label>
+                <input id="email" name="email" type="email" required autocomplete="email">
+                <p class="field__error" id="email-error"></p>
+              </div>
+              <div class="field">
+                <label for="phone">Phone / WhatsApp <span class="optional">(optional)</span></label>
+                <input id="phone" name="phone" type="tel" autocomplete="tel">
+              </div>
+              <div class="field field--full">
+                <div class="field--consent">
+                  <input id="consent" name="consent" type="checkbox" required>
+                  <label for="consent">I agree that Geo Excel may use these details to respond to my enquiry. *</label>
+                </div>
+                <p class="field__error" id="consent-error"></p>
+              </div>
+            </div>
+          </fieldset>
+
+          <div class="hp-field" aria-hidden="true">
+            <label for="website">Leave this field empty</label>
+            <input id="website" name="website" tabindex="-1" autocomplete="off">
+          </div>
+
+          <button class="btn btn--primary btn--block" type="submit">Prepare enquiry</button>
+          <p class="form-note" data-form-note>No online form service is connected to this concept site yet. Your enquiry will be prepared as an email draft for you to send.</p>
+          <div class="notice" data-form-status role="status" tabindex="-1" hidden></div>
+        </form>
+
+        <aside class="contact-card">
+          <div class="panel">
+            <h2>Contact details</h2>
+            <ul class="contact-list">
+              <li><span class="contact-list__label">Phone</span><a href="tel:+918035110602">+91 80351 10602</a></li>
+              <li><span class="contact-list__label">Email</span><a href="mailto:Info@geoexcel.group">Info@geoexcel.group</a></li>
+              <li><span class="contact-list__label">Address</span><address>3C918, 3rd Cross, 1st Block,<br>HRBR Layout, Bangalore 560043, India</address></li>
+            </ul>
+            <a class="link-arrow mt-6" href="https://www.google.com/maps/search/?api=1&amp;query=3C918%2C+3rd+Cross%2C+1st+Block%2C+HRBR+Layout%2C+Bangalore+560043" target="_blank" rel="noopener">Open in Google Maps</a>
+          </div>
+          <div class="panel panel--alt">
+            <h2>What happens next</h2>
+            <ol class="steps steps--compact">
+              <li><span class="steps__num">01</span> Your enquiry reaches the Geo Excel team.</li>
+              <li><span class="steps__num">02</span> They review product, quantity and destination.</li>
+              <li><span class="steps__num">03</span> You receive a response with a quotation or follow-up questions.</li>
+            </ol>
+          </div>
+        </aside>
+      </div>
+    </section>
+    <!-- @productmap -->

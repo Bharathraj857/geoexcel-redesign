@@ -1,0 +1,16 @@
+{
+  "name": "geoexcel-redesign",
+  "version": "1.0.0",
+  "description": "Geo Excel website redesign: export product catalogue with a qualified request-for-quote flow",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "node scripts/serve.mjs src 5173",
+    "build": "node scripts/build.mjs",
+    "preview": "node scripts/serve.mjs dist 4173",
+    "test": "node scripts/test-e2e.mjs"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

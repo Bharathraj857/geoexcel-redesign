@@ -1,0 +1,29 @@
+<header class="site-header">
+    <div class="container site-header__inner">
+      <a class="logo" href="{{base}}index.html" aria-label="Geo Excel home">
+        <!-- @icon logo -->
+        <span>GEO EXCEL</span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">
+        <span class="nav-toggle__bar"></span><span class="nav-toggle__bar"></span><span class="nav-toggle__bar"></span>
+      </button>
+      <nav class="site-nav" id="site-nav" aria-label="Main">
+        <ul class="site-nav__list">
+          <li class="site-nav__item site-nav__item--has-menu">
+            <a class="site-nav__link" href="{{base}}products.html"{{nav:products}}>Products <span class="site-nav__caret" aria-hidden="true"></span></a>
+            <ul class="submenu" aria-label="Product categories">
+              <li><a href="{{base}}products/rice.html">Rice</a></li>
+              <li><a href="{{base}}products/spices.html">Whole Spices</a></li>
+              <li><a href="{{base}}products/iqf.html">IQF Frozen</a></li>
+              <li><a href="{{base}}products/oils-ghee.html">Edible Oil &amp; Ghee</a></li>
+              <li><a href="{{base}}products/lifestyle.html">Fashion &amp; Lifestyle</a></li>
+            </ul>
+          </li>
+          <li class="site-nav__item"><a class="site-nav__link" href="{{base}}about.html"{{nav:about}}>About</a></li>
+          <li class="site-nav__item"><a class="site-nav__link" href="{{base}}certificates.html"{{nav:certificates}}>Certificates</a></li>
+          <li class="site-nav__item"><a class="site-nav__link" href="{{base}}sustainability.html"{{nav:sustainability}}>Sustainability</a></li>
+          <li class="site-nav__item site-nav__item--cta"><a class="btn btn--primary btn--sm" href="{{base}}contact.html"{{nav:contact}}>Request a Quote</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>

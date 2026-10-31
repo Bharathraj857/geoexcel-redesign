@@ -1,0 +1,33 @@
+<!--@page
+key: products
+title: Whole Spices: Cardamom, Pepper, Clove & Seeds | Geo Excel
+description: Green cardamom, black pepper, clove, cinnamon, mace, nutmeg, coriander, cumin, mustard, sesame and more, with grades, moisture, packaging and HS codes.
+scripts: catalogue
+-->
+    <section class="page-hero">
+      <div class="container">
+        <nav class="breadcrumb" aria-label="Breadcrumb"><ol><li><a href="../index.html">Home</a></li><li><a href="../products.html">Products</a></li><li aria-current="page">Whole Spices</li></ol></nav>
+        <span class="page-hero__icon"><!-- @icon spices --></span>
+        <h1>Whole spices &amp; seeds</h1>
+        <p class="lead">Whole spices largely sourced from Kerala and Karnataka, plus seed spices in 25–50 kg PP bags. <!-- @count spices --> products listed.</p>
+      </div>
+    </section>
+
+    <section class="section section--tight">
+      <div class="container" data-catalogue>
+        <div class="toolbar">
+          <label class="search">
+            <span class="visually-hidden">Search spices</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+            <input type="search" placeholder="Search, e.g. pepper, seeds, Kerala" autocomplete="off" data-search>
+          </label>
+        </div>
+        <p class="result-count" aria-live="polite" data-result-count><!-- @count spices --> products</p>
+        <div class="grid">
+          <!-- @products spices -->
+        </div>
+        <div class="empty" data-empty hidden><p>No spice matches your search.</p></div>
+        <!-- @include category-tail -->
+      </div>
+    </section>
+    <!-- @itemlist spices -->
