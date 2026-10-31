@@ -97,7 +97,7 @@ The site is static. Publish the contents of `dist/` on any static host.
 **Netlify (recommended):**
 1. Push the repository to GitHub.
 2. In Netlify, choose **Add new site → Import an existing project**, then pick the repository.
-3. Set the build command to `npm run build` and the publish directory to `dist`.
+3. The build settings come from `netlify.toml` (build command `npm run build`, publish directory `dist`, Node 22), which also adds basic security headers.
 4. Under environment variables, set `SITE_URL` to the Netlify URL, then redeploy.
 5. Netlify serves `404.html` automatically for unknown URLs.
 
