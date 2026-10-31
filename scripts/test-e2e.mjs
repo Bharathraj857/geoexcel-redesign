@@ -13,7 +13,9 @@ import { startServer } from "./serve.mjs";
 
 const PORT = 4321;
 const DEBUG_PORT = 9333;
-const BASE = `http://127.0.0.1:${PORT}`;
+// Set E2E_BASE_URL to test a deployed site instead of the local dist/ build.
+const REMOTE = (process.env.E2E_BASE_URL || "").replace(/\/$/, "");
+const BASE = REMOTE || `http://127.0.0.1:${PORT}`;
 const OUT = path.join(ROOT, "test-results");
 
 const PAGES = [
@@ -82,11 +84,12 @@ function check(name, ok, detail = "") {
 async function main() {
   const browserPath = findBrowser();
   if (!browserPath) throw new Error("No Chrome/Edge found. Set CHROME_PATH.");
-  if (!existsSync(path.join(ROOT, "dist/index.html"))) throw new Error("dist/ not found. Run npm run build first.");
+  if (!REMOTE && !existsSync(path.join(ROOT, "dist/index.html"))) throw new Error("dist/ not found. Run npm run build first.");
 
   await rm(OUT, { recursive: true, force: true });
   await mkdir(OUT, { recursive: true });
-  const server = await startServer("dist", PORT);
+  const server = REMOTE ? null : await startServer("dist", PORT);
+  console.log(`Testing ${BASE}\n`);
   const profile = path.join(os.tmpdir(), `gx-e2e-${Date.now()}`);
   const browser = spawn(browserPath, [
     "--headless=new", `--remote-debugging-port=${DEBUG_PORT}`, `--user-data-dir=${profile}`,
@@ -304,7 +307,7 @@ async function main() {
     await cdp.send("Browser.close").catch(() => {});
   } finally {
     browser.kill();
-    server.close();
+    server?.close();
   }
 
   const failed = results.filter((r) => !r.ok);

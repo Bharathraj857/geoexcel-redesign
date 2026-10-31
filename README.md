@@ -3,7 +3,7 @@
 A concept redesign of [geoexcel.group](https://www.geoexcel.group/) built around one business problem: **turning export-buyer visits into qualified quote requests.**
 
 - Source code: https://github.com/Bharathraj857/geoexcel-redesign
-- Live site: _to be added after deployment_
+- Live site: https://geoexcel-redesign.netlify.app
 - Problem statement and rationale: [PROBLEM_SOLUTION.md](PROBLEM_SOLUTION.md)
 - Research, audit and full plan: [IMPLEMENTATION_PLAN.md](IMPLEMENTATION_PLAN.md)
 
@@ -90,6 +90,12 @@ npm run preview   # http://localhost:4173
 npm test          # 52 end-to-end checks; screenshots saved to test-results/
 ```
 
+Run the same checks against the deployed site:
+```bash
+# PowerShell
+$env:E2E_BASE_URL="https://geoexcel-redesign.netlify.app"; npm test
+```
+
 ## Deployment
 
 The site is static. Publish the contents of `dist/` on any static host.
@@ -121,6 +127,5 @@ The form in `src/contact.html` has `data-endpoint=""`. To receive enquiries onli
 - **Some specifications are marked "To be confirmed".** Several values on the source site contradict each other (for example Nutmeg's HS code and Star Anise's origin). These are flagged rather than guessed, and need confirming with Geo Excel.
 - **Certificate images and numbers aren't shown.** Registrations are listed by name, with a link to the images on the current Geo Excel site.
 - **No social preview image is included** (`og:image`), because no approved brand image is available.
-- **Canonical URLs and the sitemap need the live URL.** Rebuild with `SITE_URL` once the deployment address is known.
 - **External links (Google Maps, geoexcel.group) aren't checked by the build.** Only internal links and assets are verified automatically.
 - **The site is English only.**

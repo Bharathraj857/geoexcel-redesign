@@ -5,6 +5,8 @@
 
 [build.environment]
   NODE_VERSION = "22"
+  # Live URL: enables canonical URLs and sitemap.xml in the build.
+  SITE_URL = "https://geoexcel-redesign.netlify.app"
 
 # Basic security headers for every page.
 [[headers]]
